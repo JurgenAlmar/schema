@@ -43,11 +43,11 @@ CREATE TABLE `inquiries` (
 CREATE TABLE `properties` (
   `property_id` int(10) UNSIGNED NOT NULL,
   `owner_id` int(10) UNSIGNED NOT NULL,
-  `address` varchar(255) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
   `city` varchar(100) DEFAULT NULL,
   `state` varchar(100) DEFAULT NULL,
   `zipcode` varchar(20) DEFAULT NULL,
-  `price` decimal(12,0) DEFAULT NULL,
+  `price` decimal(12,0) NOT NULL,
   `description` text DEFAULT NULL,
   `bedrooms` int(10) UNSIGNED NOT NULL,
   `bathrooms` int(10) UNSIGNED NOT NULL,
