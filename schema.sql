@@ -68,8 +68,7 @@ CREATE TABLE `properties` (
   `sqft` int UNSIGNED NOT NULL,
   `listing_at` datetime NOT NULL DEFAULT current_timestamp(),
   `status` enum('active', 'sold', 'pending') NOT NULL DEFAULT 'active',
-  `ownership_type` varchar(50) NOT NULL COMMENT 'Soovituslik enum või väiketabel standardiseerimiseks',
-  `property_type` varchar(50) NOT NULL COMMENT 'Soovituslik enum või väiketabel standardiseerimiseks',
+  `property_type` enum('condo', 'house', 'apartment', 'townhouse', 'land') NOT NULL;
   PRIMARY KEY (`property_id`),
   KEY `owner_id` (`owner_id`),
   KEY `price` (`price`),
